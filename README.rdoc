@@ -1,0 +1,14 @@
+= Deploy Tracking
+
+== Usage
+
+Install the gem via rubygems:
+  gem install deploy_tracking
+
+Or add it to your gemfile:
+  gem deploy_tracking
+
+In your Capfile, add the following line to use it:
+  require 'deploy_tracking'
+
+Everytime you deploy the Deploylog file will be updated with the latest deploy. This file will automatically be committed.
