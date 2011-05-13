@@ -13,7 +13,7 @@ configuration.load do
         f.puts "[#{release_name}] Deployed to #{current_stage} by #{me.ljust(10)} - #{branch}:#{git_info}"
       end
 
-      # `git add #{deploy_file} && git commit -m "Updating deploylog for deploy #{release_name}" #{deploy_file}`
+      `git add #{deploy_file} && git commit -m "Updating deploylog for deploy #{release_name}" #{deploy_file}`
     end
 
     task :mark do
