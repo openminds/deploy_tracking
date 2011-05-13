@@ -1,26 +1,21 @@
 # -*- encoding: utf-8 -*-
+$:.push File.expand_path('../lib', __FILE__)
+require 'deploy_tracking/version'
 
 Gem::Specification.new do |s|
-  s.name = %q{deploy_tracking}
-  s.version = "0.3.3"
+  s.name = 'deploy_tracking'
+  s.version = DeployTracking::VERSION
+  s.platform = Gem::Platform::RUBY
+  s.authors = ['Jan De Poorter', 'Joren De Groof', 'Jeroen Jacobs']
+  s.email = 'devel@openminds.be'
+  s.homepage = 'http://openminds.be'
+  s.summary = 'Tracking capistrano deploys in a deploy log file in the repository'
+  s.description = 'Tracking capistrano deploys in a deploy log file in the repository'
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jan De Poorter - Openminds"]
-  s.date = %q{2010-08-02}
-  s.email = %q{jan@openminds.be}
-  s.files = ["lib/deploy_tracking.rb", "lib/track_deploy.rb"]
-  s.has_rdoc = false
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Keep a deploy log file}
+  s.files = Dir['lib/**/*']
+  s.require_paths = ['lib']
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 3
+  s.rdoc_options = ['--charset=UTF-8']
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-    else
-    end
-  else
-  end
+  s.add_dependency 'capistrano', '~> 2.5.21'
 end
