@@ -12,9 +12,10 @@ Gem::Specification.new do |s|
   s.summary = 'Tracking capistrano deploys in a deploy log file in the repository'
   s.description = 'Tracking capistrano deploys in a deploy log file in the repository'
 
-  s.files = Dir['lib/**/*']
+  s.files = Dir['lib/**/*', 'README.rdoc']
   s.require_paths = ['lib']
 
+  s.extra_rdoc_files = ['README.rdoc']
   s.rdoc_options = ['--charset=UTF-8']
 
   s.add_dependency 'capistrano', '~> 2.5.21'
